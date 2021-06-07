@@ -4,7 +4,7 @@
 192.168.2.121
 
 [db]
-192.168.1.122
+192.168.2.122
 
 # this group has all the servers 
 [multi:children]
@@ -15,4 +15,3 @@ db
 [multi:vars]
 ansible_user=vagrant
 ansible_ssh_private_key_file=~/.vagrant.d/insecure_private_key
-
