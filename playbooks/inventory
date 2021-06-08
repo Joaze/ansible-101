@@ -1,0 +1,6 @@
+[ansiblemachine]
+ 34.72.174.155
+
+ [ansiblemachine:vars]
+ ansible_user=root
+ ansible_ssh_pass=pa33Lx$kpa

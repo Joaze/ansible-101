@@ -1,0 +1,16 @@
+---
+- name: install Apache
+  hosts: ansiblemachine  
+
+  tasks:
+    - name: install apache
+      command: yum install --quiet -y httpd httpd-devel    
+    - name: copy custom configuration file.
+      command: >
+        echo "httpd.conf" >> /etc/httpd/conf/httpd.conf
+# testing coments inside the playbook file        
+    - name: Start apache and configure it to run at boot.
+      shell: |
+        service httpd stop
+        service httpd start
+        chkconfig httpd on  
