@@ -1,0 +1,19 @@
+---
+- name: playbook example using especific modules to do things instead of use command or shell to do everything
+  hosts: all
+  
+  tasks:
+    - name: checking if i'm able to connect to the hots
+      shell: |
+        hostname >> hostname.txt
+        cp hostname.txt hostname2.txt
+        rm -rf hostname.txt
+    - name: installing apache using yum module
+      yum:
+        name: 
+          - httpd
+          - httpd-devel
+        state: present
+
+
+        
