@@ -1,7 +1,7 @@
 ---
   - name: Install apache and necessary configuration.
     hosts: all
-    become: yes
+    become: yes # when the become is defined here all tasks will be executed as a root user.
 
     tasks:
       - name: Install Apache.
@@ -10,6 +10,7 @@
             - httpd
             - httpd-devel
           state: present
+          become: true #this can be used if only one of few tasks from the playbook required root user
       
       - name: Copy configurations file.
         copy:

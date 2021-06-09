@@ -1,0 +1,5 @@
+---
+download_dir: /tmp
+solr_dir: /opt/solar
+solr_version: 8.8.2
+solr_checksum: sha512:0cd7a49107883dededcdd84af7cd3d810fcf88a5e22dace8554c8ef105692837bb527d8478e63a196b889246b11e893e4518c487e68260b5c53ba6de23e44f19
