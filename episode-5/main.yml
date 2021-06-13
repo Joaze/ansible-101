@@ -1,0 +1,37 @@
+---
+- name: Install apache2.
+  hosts: ansiblehost
+  
+  handlers:
+    - name: restart apache
+      service: 
+        name: apache2
+        state: restarted
+  
+
+  tasks:
+    - name: install apache2
+      apt:
+        name: apache2
+        state: present
+    
+    - name: make sure apache is anable at boot.
+      service:
+        name: apache2
+        state: started
+        enabled: yes  
+      
+
+    - name: copy configurations file
+      copy:
+        src: files/test.conf
+        dest: /root
+      notify: restart apache
+      
+
+    - name: Make sure handlers are flushed immediately
+      meta: flush_handlers
+
+
+
+
