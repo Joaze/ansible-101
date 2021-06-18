@@ -1,0 +1,7 @@
+[ansiblehosts]
+jumper  ansible_host=127.0.0.1
+
+[ansiblehosts:vars]
+ansible_user=vagrant
+ansible_port=2222
+ansible_ssh_pass=vagrant

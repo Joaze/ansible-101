@@ -1,0 +1,19 @@
+---
+- name: vars files example
+  hosts: ansiblehost
+
+  vars_files:
+    - vars/main.yml
+
+  tasks:
+    - name:  echo the API key which was injected into the env.
+      shell: echo $API_KEY
+      environment:
+        API_KEY: "{{ myapp_api_key }}"
+      register: echo_result
+
+    - name: show(print) the result 
+      debug: var=echo_result.stdout
+
+
+

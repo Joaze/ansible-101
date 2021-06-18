@@ -1,19 +1,19 @@
 ---
   - name: download sample file from a url lik to a specific diretório on the hostmachine.
-    host: ansiblehost 
+    hosts: ansiblehost 
 
     #example on how to use variables on the playbook
     vars:
       key: value
 
     #another example on how to use variables on the playbook using a specific file to define variables
-    vars_file:
+    vars_files:
       - vars/main.yml
 
 
     tasks:
       - name: downoad a file and save it into a specific directory
         get_url:
-        url: http://ipv4.download.thinkbroadband.com/200MB.zip
-        dest: /tmp
+          url: http://ipv4.download.thinkbroadband.com/200MB.zip
+          dest: /tmp
     

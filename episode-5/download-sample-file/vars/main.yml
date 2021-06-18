@@ -1,5 +1,4 @@
 ---
-  vars:
-    key: value
-    user: root
-    senha: root
+key: value
+user: root
+senha: root

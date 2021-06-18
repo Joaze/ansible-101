@@ -1,0 +1,12 @@
+---
+  - name: learning how to install and use rown 
+    hosts: all
+    
+    vars: 
+      homebrew_installed_packages:
+        - pv
+
+    roles:
+      - elliotweiser.osx-command-line-tools
+      - role: geerlingguy.homebrew
+        become: yes
